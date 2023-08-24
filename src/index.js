@@ -1,4 +1,11 @@
 import loadHome from "./home.js";
+import loadGallery from "./gallery.js";
+
+function createPage(){
+    const page=document.createElement("div");
+    page.setAttribute("id","page");
+    return page;
+}
 
 function createBtn(id, text){
     const btn = document.createElement('button');
@@ -28,7 +35,18 @@ function createHeader(){
     return header;
 }
 
+function addEvents(){
+    const homeBtn=document.getElementById("home");
+    const galleryBtn=document.getElementById("gallery");
+    const contactBtn=document.getElementById("contact");
+
+    homeBtn.onclick=loadHome;
+    galleryBtn.onclick=loadGallery;
+}
+
 const content=document.getElementById("content");
 content.appendChild(createHeader());
+content.appendChild(createPage());
+addEvents();
 
 loadHome();

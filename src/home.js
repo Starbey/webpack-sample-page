@@ -22,8 +22,10 @@ function createP(text){
 }
     
 function loadHome(){
-    const content=document.getElementById("content");
-    content.appendChild(createHome());//appends home
+    const page=document.getElementById("page");
+    page.textContent="";
+    page.appendChild(createHome());//appends home
+    console.log("home loaded");
 }
     
 export default loadHome;
