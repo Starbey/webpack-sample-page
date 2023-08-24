@@ -1,5 +1,6 @@
 import loadHome from "./home.js";
 import loadGallery from "./gallery.js";
+import loadContact from "./contact.js";
 
 function createPage(){
     const page=document.createElement("div");
@@ -42,6 +43,7 @@ function addEvents(){
 
     homeBtn.onclick=loadHome;
     galleryBtn.onclick=loadGallery;
+    contactBtn.onclick=loadContact;
 }
 
 const content=document.getElementById("content");
